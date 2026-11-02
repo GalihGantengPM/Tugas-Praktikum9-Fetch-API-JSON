@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: beige;
+    color: #333333;
+    line-height: 1.6;
+    padding: 16px;
+}
+
+body.dark-mode{
+    background-color: #1a1a1a;
+    color: #f2f2f2
+}
+
+.tersembunyi {
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: burlywood;
+    padding: 16px;
+    text-align: center;
+}
+
+header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+}
+
+header nav a {
+    color: brown;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+
+header nav a:hover {
+    background-color: brown;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+section h2 {
+    color: brown;
+    border-bottom: 2px solid burlywood;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #0c0909;
+    padding: 8px;
+    text-align: left;
+}
+
+aside {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+aside h2 {
+    color: brown;
+    margin-bottom: 12px;
+}
+
+aside a {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: burlywood;
+    color: rgba(0, 0, 0, 0.957);
+    padding: 12px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #tentang-saya,
+    #biodata {
+        grid-column: span 2;
+    }
+
+    body {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "main   aside"
+            "footer footer";
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+        margin-top: 0;
+    }
+
+    aside {
+        grid-area: aside;
+        margin-top: 0;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+/* Efek hover artikel dari Modul 5 */
+.artikel-hover {
+    background-color: #eef4fb;
+    transition: 0.3s;
+}
+
+/* Form Komentar styling */
+#komentar {
+    margin-top: 30px;
+}
+
+.pesan-error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid brown; /* Warna selera kamu */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

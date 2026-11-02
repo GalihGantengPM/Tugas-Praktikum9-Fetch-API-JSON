@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Profil diri</h1>
+        <h2>Foto saya</h2>
+        <img src="gambargw2.jpeg" alt="Foto Profil" height="200" width="200">
+        <button id="btn-tema">Mode Gelap</button>
+        <button id="btn-info">Info Tambahan</button>        
+        <nav>
+            <ul>
+                <li><a href="#tentang-saya">Tentang Saya</a></li>
+                <li><a href="#biodata">Biodata</a></li>
+                <li><a href="#hobi">Hobi</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="loading" class="loading-container" style="display: none;">
+        <div class="spinner"></div>
+        <p>Memuat artikel...</p>
+        </div>
+
+        <section id="tambah-portofolio" style="margin-bottom: 20px;">
+            <h2>Tambah Portofolio / Artikel Baru</h2>
+            <input type="text" id="input-judul-artikel" placeholder="Judul Artikel" required>
+            <br><br>
+            <textarea id="input-isi-artikel" placeholder="Isi Artikel..." required></textarea>
+            <br>
+            <button type="button" id="btn-tambah-artikel">Tambah Artikel</button>
+        </section>
+        
+        <section class="daftar-artikel"></section>
+        
+        <section id="komentar">
+            <h2>Tinggalkan Komentar</h2>
+            <form id="form-komentar">
+                <input type="text" id="input-nama" placeholder="Nama Anda" required>
+                <br><br>
+                <textarea id="input-pesan" placeholder="Tulis komentar..." required></textarea>
+                <div id="pesan-error" class="pesan-error"></div>
+                <br>
+                <button type="submit">Kirim</button>
+                <button type="button" id="btn-hapus-semua">Hapus Semua Komentar</button>
+            </form>
+            <ul id="daftar-komentar"></ul>
+        </section>
+
+        
+
+    </main>
+
+    <aside>
+        <h2>Tentang Penulis (API)</h2>
+        <p>Nama: <span id="nama-penulis">Memuat...</span></p>
+        <p>Email: <span id="email-penulis">Memuat...</span></p>
+        <hr style="margin: 15px 0;">
+
+
+        <h2>Media Sosial</h2>
+        <a href="https://www.instagram.com/william_galih?stkn=MXMzdThqcnpmNDFsZQ==">
+            <img src="instagram.jpg" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="https://www.tiktok.com/@wilwisngg?_r=1&_t=ZS-99fwA9JMl1u">
+            <img src="tiktok.png" alt="TikTok" width="30" height="30">
+        </a>
+        <a href="https://www.facebook.com/share/18xgrQWeiz/">
+            <img src="fb.jpg" alt="Facebook" width="30" height="30">
+        </a>
+    </aside>
+
+    <button id="btn-kembali-atas" style="display: none; position: fixed; bottom: 20px; right: 20px; padding: 10px; background: brown; color: white; border: none; border-radius: 5px; cursor: pointer;">⬆ Ke Atas</button>
+    
+    <footer>
+        <p>&copy; dibuat oleh William Galih Wisanggeni 2026</p>
+  <button id="btn-reset">Reset Semua Data</button>
+  </footer>
+
+  <script src="script.js"></script>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
